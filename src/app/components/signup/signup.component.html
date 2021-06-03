@@ -1,0 +1,106 @@
+<div fxLayoutAlign="center">
+    <mat-card fxFlex="40" class="text-center my-2">
+        <div>
+            <button type="button" (click)="closeSignupPage()" class="close">&times;</button>
+        </div>
+        <!-- <mat-toolbar class="main-div mb-2">
+            Signup Page
+        </mat-toolbar> -->
+        <div class="row">
+            <form [formGroup]="signupForm" >
+                <mat-form-field style="width:75%;" appearance="outline">
+                    <input matInput type="text" formControlName="fname" placeholder="FirstName*">
+                    <mat-error *ngIf="f.fname.touched && f.fname.invalid">
+                        <span>Please Enter your First Name</span>
+                    </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field style="width:75%;"appearance="outline">
+                    <input matInput type="text" formControlName="lname" placeholder="LastName*">
+                    <mat-error *ngIf="f.lname.touched && f.lname.invalid">
+                        <span>Please Enter your Last Name</span>
+                    </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field style="width:75%;"appearance="outline">
+                    <input matInput type="text" formControlName="email" placeholder="Work Email*">
+                    <mat-error *ngIf="f.email.touched && f.email.invalid">
+                        <span>Email is mandatory!</span>&nbsp;&nbsp;<span>email must have @ sign</span>
+                    </mat-error>
+                    <!-- <mat-error *ngIf="email.hasError('email') && email.hasError('required')">
+                        <span>Please Enter Valid Email Address</span>
+                    </mat-error> -->
+                </mat-form-field>
+
+                <mat-form-field style="width:75%;"appearance="outline">
+                    <input matInput type="text" formControlName="phonenumber" placeholder="Phone Number*">
+                    <mat-error *ngIf="f.phonenumber.touched && f.phonenumber.invalid">
+                        <span></span>
+                    </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field style="width:75%;"appearance="outline">
+                    <input matInput type="text" formControlName="companyname" placeholder="Company Name*">
+                    <mat-error *ngIf="f.companyname.touched && f.companyname.invalid">
+                        <span>Please Enter Company Name</span>
+                    </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field style="width:75%;"appearance="outline">
+                    <input matInput type="text" formControlName="jobtitle" placeholder="Job Title*">
+                    <mat-error *ngIf="f.jobtitle.touched && f.jobtitle.invalid">
+                        <span>Please Enter Job Title</span>
+                    </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field style="width:75%;"appearance="outline">
+                    <!-- <mat-label>Roll (required)</mat-label> -->
+                    <select matNativeControl formControlName="companysize" placeholder="Company Size">
+                      
+                      <option value="">select</option>
+                      <option value="a">I'm contractor / Freelancer</option>
+                      <option value="b">1-199</option>
+                      <option value="c">200-1999</option>
+                      <option value="d">2000-5000</option>
+                      <option value="e">5001+</option>
+                    </select>
+                    <mat-error *ngIf="f.companysize.touched && f.companysize.invalid">
+                        <span>Please Enter your role </span>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field style="width:75%" appearance="outline">
+                    <select matNativeControl formControlName="countpeople">
+                        <option value="">select</option>
+                        <option value="p">just myself</option>
+                        <option value="q">5-20</option>
+                        <option value="r">200-1999</option>
+                        <option value="s">2000-5000</option>
+                        <option value="t">5001+</option>
+
+                    </select>
+                </mat-form-field>
+
+                <mat-form-field style="width:75%;" appearance="outline">
+                    <input type="text" matInput formControlName="trainingNeeds"placeholder="what are your training needs*">
+                </mat-form-field>
+                
+                <div class="text-msg">
+                    <span>I'd like to receive news,insights and promotions from MarketPlace for Business</span>
+                </div>
+                 
+                <div class="row">
+                    <div class="signup_btn">
+                        <button type="submit" class="btn btn-danger" (click)="OnSubmit()">Get Started</button> 
+                        <!-- [disabled]="!signupForm.valid" -->
+                    </div>
+                </div>
+                    
+                
+                
+            </form>
+        </div>
+        
+    </mat-card>
+</div>
+ 

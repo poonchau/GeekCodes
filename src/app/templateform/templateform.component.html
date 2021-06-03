@@ -1,0 +1,95 @@
+<!-- <div *ngIf="isSubmitted">
+    <span>Form Submitted!!</span>
+</div>
+
+<mat-card style="width:50%;" class="text-center">
+    <mat-card-title>Reactive Form</mat-card-title>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field style="width:75%;">
+            <input matInput type="text" formControlName="email" placeholder="Enter Email*">
+            <mat-error *ngIf="f.email.invalid && f.email.touched">
+                <span>Please Enter Valid Email Address</span>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field style="width:75%;">
+            <input matInput type="text" formControlName="password" placeholder="Enter Password*">
+            <mat-error *ngIf="f.password.invalid && f.password.touched">
+                <span>must contain 1 Uppercase, 1 Lowercase, 1 Number, 1 special character except underscore "_" and hyphen "-"</span>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field style="width:75%;">
+            <mat-label>Select</mat-label>
+            <mat-select formControlName="getSelectedData">
+                <mat-option value="angular">Angular</mat-option>
+                <mat-option value="html">HTML</mat-option>
+            </mat-select>
+        </mat-form-field><br><br>
+        <mat-radio-group style="width:75%;" formControlName="gender">
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="male">Male</mat-radio-button>
+        </mat-radio-group><br><br>
+        <button style="width:75%;" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+    </form>
+</mat-card>
+<div class="card mt-2" style="width:50%;" *ngIf="isSubmitted">
+    <div>
+        <h2>Email-ID:{{email}}</h2>
+    </div>
+    <div>
+        <h2>Paasword:{{password}}</h2>
+    </div>
+    
+</div> -->
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group row">
+                    <input type="text" class="form-control" formControlName="email" placeholder="Enter Email*">
+                    <div *ngIf="f.email.invalid && f.email.touched">
+                        <span style="color:red;">Please Enter Valid Email Address</span>
+                    </div>
+                </div>
+                
+                    <div class="form-group row">
+                        <input type="text" class="form-control" formControlName="password"(change)="receviedPassword($event)" placeholder="Enter Password*">
+                        <div *ngIf="f.password.invalid && f.password.touched">
+                            <span style="color:red;">Please Enter Password</span>
+                        </div>
+    
+                    </div>
+                
+                
+                    <div class="form-group row">
+                        <input type="text" class="form-control" formControlName="confirmPassword" (change)="receivedConfirmPassword($event)"placeholder="Confirm Password*">
+                        <div *ngIf="f.confirmPassword.invalid && f.confirmPassword.touched">
+                            <span style="color:red;">Please Enter ConfirmPassword</span>
+                        </div>
+                        <div *ngIf="validation">
+                            <span style="color:red;">Confirmed Password doesn't not matching</span>
+
+                        </div>
+    
+                    </div>
+
+                    <div formArrayName="skills">
+                        <div *ngFor="let item of loginForm.controls.skills['controls']; let i = index" [formGroupName]="i">
+                            <input type="text" formControlName="skill" id="skill{{i}}">
+                        </div>
+                    </div>
+               
+              
+               <div class="row">
+                 <button (click)="addSkills()">AddSkills</button>
+               </div>
+                <div class="row">
+                    <button style="width:100%;" class="btn btn-info" [disabled]="!loginForm.valid">Login</button>
+                </div>
+
+
+                
+
+            </form>
+        </div>
+    </div>
+</div>

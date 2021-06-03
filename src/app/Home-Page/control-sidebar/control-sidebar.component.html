@@ -1,0 +1,46 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <button color="primary" mat-button routerLink="#">Customers<span><i class="fa fa-angle-right fa-1x mx-2"></i></span></button>
+        <button color="primary" mat-button routerLink="#">Orders<span><i class="fa fa-angle-right fa-1x mx-2"></i></span></button>
+        <button color="primary" mat-button routerLink="#">Messages<span><i class="fa fa-angle-right fa-1x mx-2"></i></span></button>
+    </mat-drawer>
+    <div class="sidenav-content">
+        <mat-toolbar color="">
+            <mat-toolbar-row>
+                <button mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span routerLink="#">Our Services</span>
+                <span routerLink="#">Our Products</span>
+                <span routerLink="#">Contact Us</span>
+                <button class="btn"><a routerLink="#">Login</a></button>
+                <button class="btn"><a routerLink="#">Sign up</a></button>
+
+
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                      <mat-icon>share</mat-icon>
+                      <span>share</span>
+                    </button>
+                    <button mat-menu-item>
+                      <mat-icon>money</mat-icon>
+                      <span>Profit</span>
+                    </button>
+                    <button mat-menu-item>
+                      <mat-icon>more</mat-icon>
+                      <span>More</span>
+                    </button>
+                </mat-menu>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+
+<div class="main_content">
+    <h4>We Welcome You!!</h4>
+</div>
+</mat-drawer-container>
+
+

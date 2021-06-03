@@ -1,0 +1,23 @@
+<mat-card style="width:50%" class="text-center mx-4">
+    <form [formGroup]="loginForm">
+        <mat-form-field style="width:75%;" appearance="outline">
+            <!-- <i class="fa fa-envelope"></i> -->
+            <input type="text" matInput formControlName="email" placeholder="Enter Email*">
+            <mat-error>
+                <span>Please Enter Valid email</span>
+                </mat-error>
+        </mat-form-field><br>
+        <mat-form-field style="width:75%;" appearance="outline">
+            <!-- <i class="fa fa-lock"></i> -->
+            <input type="password" matInput formControlName="password"placeholder="Enter Password*">
+            <mat-error>
+                <span>Password should contain at least 1 upper letter, 1 number, No special symbol except _ and -</span>
+            </mat-error>
+        </mat-form-field><br><br>
+        <button style="width:75%;" type="submit" class="btn btn-info" [disabled]=!loginForm.valid (click)="onSubmit()">Log In</button>
+    </form>
+        
+    
+</mat-card>
+    
+

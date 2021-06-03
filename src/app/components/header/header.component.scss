@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container{
+    max-width: 100rem;
+   // max-width: 120rem;
+    min-height: 4rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    height: 4rem;
+    box-shadow: 0 0 .1rem rgba(0,0,0,.2);
+  }
+
+  img{
+    width: 6rem;
+    height: 3rem;
+    padding-left: 18px;
+ }
+
+ .brand_circle {
+     position: relative;
+
+  }
+
+  .brand_circle h5.brand_lobo{
+   
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    transform: translateX(-30px);
+  }
+
+h5::after{
+    
+    content: "Courses";
+    position: absolute;
+    transform: translateY(-3px);
+    font-size: 14px;
+    color: #5a5858;
+  }
+ 
+// categories and SearchBox
+  .wrapper .search_box{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+  }
+
+  .search_box .dropdown .default_option {
+      margin-right: -28px;
+    }
+
+    .search_box .dropdown .default_option .dropdown-content ul{
+        display: none;
+        list-style: none;
+      }
+
+    .search_box .dropdown .default_option:hover .dropdown-content ul{
+        display: block;
+        width: 125px;
+        position: absolute;
+        top: 40px;
+        left: -1px;
+        background: rgb(248, 245, 245);
+        border-radius: 2px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        
+      }
+
+ .search_box .dropdown .default_option:hover .dropdown-content ul a{
+       display: block;
+     
+  }
+
+  .search_box .dropdown .default_option .dropdown-content ul li a{
+        text-decoration: none;
+        color: black;
+  }
+
+  i.fa-angle-right{
+        float: right;
+        transform: translateY(-20px);
+        margin-right: 5px;
+  }
+
+   //<--------Search Area------------> 
+
+  .wrapper .search_box .search_field{
+    
+      width: 25rem;
+      margin-bottom: 15px;
+      
+     
+  }
+
+  .wrapper .search_box .search_field .search_input{
+    
+    //width: 23.5rem;
+    width: 25rem;
+    height: 2.7rem;
+    margin-top: 30px;
+    margin-left: 35px;
+    border: 1px solid #ded7d7;
+    border-radius: 5px;
+}
+  
+
+  .wrapper .search_box .search_field input[type=text] {
+    padding: 7px;
+    
+  }
+
+
+  .search_input:focus{
+      outline: none;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #9fa3b1;
+    padding-left: 6px;
+  }
+
+  i.fa-search{
+     float: right;
+     color: #9fa3b1;
+     transform: translateY(-30px);
+    
+  }
+
+// <--Services that we provides --> 
+  .services_info{
+      display: flex;
+      justify-content: space-evenly;
+  }
+
+  .services_info .service a{
+    margin-right: 1px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+      
+  }
+
+  //<----Buttons---->
+  .btn .log_in_btn{
+    width: 5rem;
+    height: 2.5rem;
+    border: 1px solid #b7b2b2;
+    border-radius: 5px;
+    background: none;
+    margin-right: 1.5rem;
+
+
+    & a {
+        text-decoration: none;
+        font-weight: 5px;
+        color: black;
+    }
+
+   
+  }
+
+  .btn .sign_up_btn{
+    width: 5rem;
+    height: 2.5rem;
+    border: 1px solid  #b7b2b2;
+    border-radius: 5px;
+    background: none;
+    background-color: #00CED1;
+    margin-right: 2rem; 
+
+    & a {
+        text-decoration: none;
+        font-weight: 5px;
+        color: black;
+    }
+
+    // &:hover{
+    //     background: rgb(170, 194, 240);
+    // }
+ }
+
+
+ 
+
+
+
+/* SubHeader Navbar*/
+.menu_bar{
+    //width: 100%;
+   // height: 3.5rem;
+    box-shadow: 0 0 .1rem rgba(0,0,0,.2);
+    align-items: center;
+  }
+ .menu_bar ul{
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+}
+
+.menu_bar ul li{
+    margin: 10px auto;
+   // padding: 5px 10px;
+    padding: 10px 10px;
+    
+}
+
+.menu_bar ul li a{
+    text-decoration: none;
+    color:black;
+    //line-height: 15px;
+    //font-weight: 40px;
+}
+
+
+
+.active,.menu_bar ul li:hover{
+   
+    height: 40px;
+    //background: #e6e6e6;
+    border-radius: 3.5px;
+    box-shadow: 0 0 2px #9fa3b1,
+                0 0 2px #9fa3b1;
+  }
+
+  .sub_menu_1{
+    display: none;
+    
+    
+  }
+
+  .menu_bar ul li:hover .sub_menu_1{
+    display: block;
+    position: absolute;
+    background:#e6e6e6;
+   // margin-top: 15px;
+   
+    margin-top: 12px;
+    margin-left: -15px;
+  
+ }
+
+ 
+
+
+ /*Align dropdown Vertically*/
+
+// .menu_bar ul li:hover > ul li{
+//     opacity: 1;
+//     visibility: visible;
+   
+  
+//   }
+  
+  .menu_bar ul li:hover .sub_menu_1 ul li{
+    width: 100px;
+    margin-top: 5px;
+    margin-left: 8px;
+    padding-top: 10px;
+    background: transparent;
+    //position: absolute;
+    
+  }
+
+  .menu_bar ul li .sub_menu_1 ul{
+    //border: 1px solid cyan;
+   //border-bottom: 3px solid cyan;
+  }
+  
+
+
+
+// Media Query
+
+@media (max-width: 1140px) {
+    .header {
+        width: 100vw;
+        height: 100vh;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #111;
+        color: #fff;
+      }
+
+      img{
+       display: none;
+       visibility: hidden;
+     }
+    
+     .brand_circle {
+        display: none;
+        visibility: hidden;
+    
+      }
+      .brand_circle h5.brand_lobo{
+        display: none;
+        visibility: hidden;
+      }
+
+
+      .menu_bar ul{
+        display: none;
+      }
+
+      .search_box .dropdown .default_option {
+        display: none;
+      }
+
+      .wrapper .search_box .search_field .search_input{
+    
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        width: 25rem;
+        height: 3rem;
+       // margin-top: 30px;
+       // margin-left: 35px;
+        border: 1px solid #ded7d7;
+        border-radius: 5px;
+    }
+
+
+    .services_info{
+      display: flex;
+      flex-direction: column;
+      //justify-content: space-evenly;
+      align-items: center;
+  }
+
+  .services_info .service{
+
+   
+    margin-bottom: 3em;
+
+
+  }
+
+  .services_info .service a {
+    color: #fff;
+
+  }
+
+  .services_info span a:hover {
+    color: cyan;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+
+  .btn .log_in_btn{
+    width: 6rem;
+    height: 3rem;
+    border: 2px solid #00CED1;
+    border-radius: 5px;
+    background: none;
+    //margin-right: 1.5rem;
+
+
+    & a {
+        text-decoration: none;
+        font-weight: 20px;
+        color: #fff;
+    }
+
+   
+  }
+
+  .btn .sign_up_btn{
+    width: 6rem;
+    height: 3rem;
+    border: 2px solid #00CED1;
+    border-radius: 5px;
+    background: none;
+   // background-color: #00CED1;
+    //margin-right: 2rem; 
+
+    & a {
+        text-decoration: none;
+        font-weight: 20px;
+        color: #fff;
+    }
+  }
+
+
+}
+

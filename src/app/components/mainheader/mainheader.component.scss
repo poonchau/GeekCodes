@@ -1,0 +1,180 @@
+$color-grey-light-2: #f4f2f2;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+// html{
+//     font-size: 62.5%;
+// }
+
+.container {
+    max-width:100rem;
+    min-height: 4rem;
+    box-shadow: 0 0 .1rem rgba(0,0,0,.2);
+}
+
+.header {
+    display: flex;
+    font-size: 1rem;
+    height: 4rem;
+    justify-content: space-around;
+   // background: rgb(120, 173, 124);
+   background: linear-gradient(to right, #c0dd71ec,#ec518d);
+    
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    margin-top: .8rem;
+    border: 1px solid black;
+}
+
+
+
+.brand_circle h5{
+    position: relative;
+    //margin-left: 1rem;
+    margin-top: 1rem;
+    margin-right: 4rem;
+    color: rgb(233, 99, 99);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+h5::before{
+    content: "Hire";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: rgb(240, 39, 82);
+    margin-bottom: 1.5rem;
+    padding-left: 7rem;
+    
+}
+
+
+
+.search_box .dropdown{
+    position: absolute;
+    padding-right: 31rem;
+    width: -30px;
+ // width: 30px;
+    //border-right: 1.7px solid black;
+    
+}
+
+.search_box .dropdown:after{
+    content: "";
+    position: absolute;
+    top:10px;
+    left: 80px;
+    border: 5px solid;
+    border-color:#5070ef transparent transparent transparent;
+}
+
+
+
+.search_box .dropdown .default__option {
+   padding-right: 1rem;
+   border-right: 1.7px solid rgb(197, 69, 69);
+    
+}
+
+
+.search_box .dropdown .dropdown_list ul {
+   //display: block;
+    list-style: none;
+    position: absolute;
+    width: 100px;
+    margin-top: 1.5rem;
+    background: #ccc;
+    padding-left: 8px;  
+}
+
+
+.search_box .dropdown .dropdown_list ul li {
+    cursor: pointer;
+}
+
+.search_box {
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    &__input{
+        
+        width: 600px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 6px;
+        padding-left: 12rem;
+        transition: all .2s linear;
+        justify-content: center;
+        align-items: center;
+
+        &:focus {
+            outline: none;
+            
+        }
+
+        
+        
+
+    }
+
+    &__button{
+       
+        width: 5px;
+        height: 1rem;
+        border: none;
+        //color:rgb(143, 139, 139);
+        color: #ccc;
+        position: absolute;
+        place-items: center;
+        right: 1.5rem;
+        margin-bottom: 8px;
+    
+    }    
+    
+}
+
+/*Login & Signup Button*/
+.loginbtn{
+    width: 5rem;
+    height: 2rem;
+    margin: 12px 0;
+    //margin-left: 5rem;
+    border-radius: 5px;
+    border: 1px solid #68686bec;
+    
+
+}
+
+.signupbt{
+    width: 5rem;
+    height: 2rem;
+    margin: 12px 0;
+
+   //margin-left: 5rem;
+    border-radius: 5px;
+    border: 1px solid #68686bec;
+}
+
+.shopping_cart{
+    width: 2rem;
+    height: 1rem;
+    margin: .5rem 1rem;
+}
+
+.shopping_cart .cart_lobo{
+    color: #5070ef;
+    //border: 1px solid #68686bec;
+}
+

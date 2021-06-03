@@ -1,0 +1,38 @@
+<mat-card style="width:50%;">
+
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+    <mat-form-field style="width:75%;">
+        <input matInput type="text" formControlName="fname" placeholder="Enter firstName*">
+        <mat-error *ngIf="f.fname.invalid && f.fname.touched">
+        <span>first name is required</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field style="width:75%;">
+        <input matInput type="text" formControlName="lname" placeholder="Enter lastName*">
+        <mat-error *ngIf="f.lname.invalid && f.lname.touched">
+         <span>Lat name is required</span>
+        </mat-error>
+    </mat-form-field><br>
+
+   
+    <div formArrayName="Address">
+        <div *ngFor="let item of empForm.controls.Address['controls']; let i=index" [formGroupName]="i">
+            <mat-form-field style="width:75%;" >
+                <input matInput type="text" formControlName="City" id ="City{{i}}"placeholder="Enter your skills*">
+                <!-- <mat-error *ngIf="f.City.invalid && f.City.touched">
+
+                </mat-error> -->
+            </mat-form-field>
+            <button (click)="removeField(i)">Remove</button>    
+        </div>
+   </div>
+    <br>
+
+    <button style="width:20%;"(click)="addSkills()">Add Skills</button><br><br>
+    
+    <button style="width:75%;"class="btn btn-info" [disabled]="!empForm.valid">Submit</button>
+
+</form>
+
+
+</mat-card>

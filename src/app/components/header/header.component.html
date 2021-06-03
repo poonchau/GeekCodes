@@ -1,0 +1,119 @@
+<div class="container">
+   <header class="header">
+      <figure>
+         <div class="brand_img">
+            <img src="../../../assets/images/Son_Goku.PNG" alt="logo">
+         </div>
+      </figure>
+      <div class="brand_circle">
+          <h5 class="brand_lobo">SkillConnect</h5>
+      </div>
+          
+     <!-- Search box with dropdown -->
+      <div class="wrapper">
+           <div class="search_box">
+               <div class="dropdown" (click)="clickMe()">
+                   <div class="default_option">Categories
+                       <i class="fa fa-angle-down fa-1x"></i>
+                       <div class="dropdown-content">
+                           <ul *ngIf="isClicked">
+                            
+                               <li><a routerLink="/">Sales</a><i class="fa fa-angle-right"></i></li>
+                               <li><a routerLink="/">Business</a><i class="fa fa-angle-right"></i></li>
+                           </ul>
+                       </div>
+                    </div>  
+                </div>
+
+               <div class="search_field">
+                   <input type="text" class="search_input" placeholder="Search for anything">
+                   <span class="search_glass"><i class="fa fa-search"></i></span>
+               </div>
+           </div>
+       </div>  
+    <!-- Services that we provides -->     
+    <div class="services_info">
+        <span class="service"><a routerLink="#">Top Courses</a></span>
+        <span class="service"><a routerLink="#">Top Educators</a></span>
+        <span class="service"><a routerLink="#">Hire For Business</a></span>
+    </div>  
+
+    <!-- Signup and Login Button -->
+      <div class="btn">
+         <button class="log_in_btn"><a routerLink='/login'>Log in</a></button>
+         <!--  data-toggle="modal" data-target="#loginModal" -->
+         <button class="sign_up_btn"><a routerLink="/signup">Sign Up</a></button>
+         <!-- data-toggle="modal" data-target="#signupModal" -->
+     </div>
+   </header>
+      
+</div>
+
+
+<!--SubHeader Section-->
+<section>         
+   <div class="menu_bar">
+       <ul>
+          <li class="active"><a routerLink="#">All Courses</a>
+            <div class="sub_menu_1">
+                <ul>
+                    <li><a routerLink="#">Web dev</a></li>
+                    <li><a routerLink="#">Mobile dev</a></li>
+                </ul>
+            </div>  
+            </li>
+           <li><a routerLink="#">Business</a>
+               <div class="sub_menu_1">
+                   <ul>
+                       <li><a routerLink="#">Web dev</a></li>
+                       <li><a routerLink="#">Mobile dev</a></li>
+                   </ul>
+               </div>
+            </li>
+
+           <li><a routerLink="#">Finance & Accounting</a>
+               <div class="sub_menu_1">
+                   <ul>
+                       <li><a routerLink="#">Web dev</a></li>
+                       <li><a routerLink="#">Mobile dev</a></li>
+                   </ul>
+               </div>
+           </li>
+
+           <li><a routerLink="#">IT & Software</a>
+               <div class="sub_menu_1">
+                   <ul>
+                       <li><a routerLink="#">Websites</a></li>
+                       <li><a routerLink="#">Mobile</a></li>
+                       <li><a routerLink="#">windows</a></li>
+                       <li><a routerLink="#">Desktop</a></li>
+                   </ul>
+               </div>
+           </li>
+
+           <li><a routerLink="#">Office Productivity</a>
+
+           </li>
+
+
+           <li><a routerLink="#">Personal development</a>
+               
+           </li>
+
+           <li><a routerLink="#">Design</a>
+               
+           </li>
+
+           <li><a routerLink="#">Marketing</a>
+               
+           </li>
+
+           <li><a routerLink="#">Health & Fitness</a>
+               
+           </li>
+        </ul>
+              
+    </div> 
+       
+</section>
+

@@ -1,0 +1,153 @@
+<!-- <div *ngIf="isSubmitted">
+    <span>Form Submitted Successfully!!</span>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group row">
+                    <input type="text" formControlName="email" class="form-control" placeholder="Enter Email*">
+                    <div *ngIf="f.email.invalid && f.email.touched">
+                       <span style="color:red;">Please Enter Valid Email Address</span>
+                    </div>
+                </div>
+             
+                <div class="form-group row">
+                    <input type="text" formControlName="password" class="form-control" placeholder="Enter Password*">
+                    <div *ngIf="f.password.invalid && f.password.touched">
+                        <span style="color:red;">must contain at least 1 Uppercase, 1 Lowercase, 1 Number, 1 Special character except underscore "_" and hyphen"-"</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <select class="form-control" formControlName="selectOption">
+                      <option value="" disabled>Select</option>
+                      <option value="one">Option1</option>
+                      <option value="two">Option2</option>
+                    </select>
+                </div>
+
+                < <div class="form-group">
+                    Female&nbsp;<input type="radio" formControlName="gender" value="female">
+                    Male &nbsp;<input type="radio" formControlName="gender" value="male">
+                </div> 
+
+                
+                <div class="row">
+                    <button class="btn btn-info" [disabled]="!loginForm.valid">Login</button>
+                </div>
+                
+            </form>
+
+        </div>
+        
+    </div>
+
+</div> -->
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="card">
+            <form #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm)">
+                <div class="form-group row">
+                    <input type="text" class="form-control" name="fname" ngModel #fname="ngModel" placeholder="Enter First Name*" required>
+                    <small style="color: red;" *ngIf="fname.invalid && fname.touched">Please enter UserName!</small>
+                </div>
+                <div class="form-group row">
+                    <input type="text" class="form-control" name="email" ngModel #email="ngModel" placeholder="Enter Email*" required>
+                </div>
+                <div class="form-group row">
+                    <input type="radio" name="genderField" value="female" ngModel #genderField="ngModel" required>
+                    <label>female</label>
+                    <input type="radio" name="genderField" value="male" ngModel #genderField="ngModel" required>
+                    <label>male</label>
+                </div>
+                <div class="form-check row">
+                    <input type="checkbox" class="form-check-input" name="termField" ngModel>
+                    <label>Agree to terms</label>
+                </div>
+                <div class="form-group row">
+                    <textarea class="form-control" name="message" ngModel>
+                    </textarea>
+                </div>
+                    
+                        
+                    <div class="row">
+                        <button class="btn btn-info" [disabled]="!signUpForm.valid">Submit</button>
+                    </div>
+                    //<div class="row">
+                        <button type="reset" (click)="resetData()">Reset</button>
+                    </div>//
+                    
+        
+                </form>
+          
+        </div>
+        
+        
+
+    </div>
+
+</div> -->
+
+<mat-card style="width:50%;">
+    <mat-card-title>Reactive Form using Angular Material</mat-card-title>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+       <mat-form-field style="width:75%;">
+           <input matInput type="text" formControlName="fname" placeholder="Enter name*">
+           <mat-error *ngIf="f.fname.touched">
+            <span>First name is required</span>
+           </mat-error>
+       </mat-form-field>
+       <mat-form-field style="width:75%;">
+           <input matInput type="text" formControlName="email" placeholder="Enter Email*">
+           <mat-error *ngIf="f.email.touched && f.email.invalid">
+            <span>Please Enter Valid Email Address</span>
+           </mat-error>
+        </mat-form-field>
+
+        <mat-form-field style="width:75%;">
+            <input matInput type="number" formControlName="phoneNumber" placeholder="Enter Mobile Number*">
+            <mat-error *ngIf="f.phoneNumber.touched && f.phoneNumber.invalid">
+            <span>Please Enter Valid PhoneNumber</span>
+            </mat-error>
+        </mat-form-field><br>
+
+        <mat-radio-group formControlName="gender"> 
+            <mat-radio-button value="female" color="primary">Female</mat-radio-button>
+            <mat-radio-button value="male" color="primary">Male</mat-radio-button>
+        </mat-radio-group><br>
+        
+        <mat-form-field>
+            <mat-label>--Select--</mat-label>
+            <mat-select formControlName="selectData">
+                <mat-option value="angular">Angular</mat-option>
+                <mat-option value="react">React</mat-option>
+                <mat-option value="Vue">Vue</mat-option>
+            </mat-select>
+            <mat-error *ngIf="f.selectData.touched && f.selectData.invalid">
+            <span>Please select</span>
+            </mat-error>
+        </mat-form-field><br>
+
+        <mat-checkbox formControlName="termField">Agree to Term and Conditions</mat-checkbox>
+
+        <mat-form-field style="width:75%;" appearance="fill">
+            <mat-label>TextArea</mat-label>
+            <textarea matInput formControlName="viewMessage"></textarea>
+        </mat-form-field>
+
+        <div formArrayName="skills">
+            <div *ngFor="let item of signUpForm.controls.skills['controls']; let i = index"[formGroupName]="i">
+                <mat-form-field>
+                    <input matInput type="text" formControlName="skill" id="skill{{i}}"placeholder="Angular, C#">
+                </mat-form-field>
+            </div>
+        </div>
+        <button (click)="addData()">Add Skills</button>
+        <button style="width:75%;"mat-raised-button color="primary" [disabled]="!signUpForm.valid">Submit</button>
+        <button style="width:75%;" mat-raised-button color="default" (click)="resetData()">Reset</button>
+        
+    </form>
+</mat-card>
+
