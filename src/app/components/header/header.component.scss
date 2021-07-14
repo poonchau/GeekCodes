@@ -141,7 +141,7 @@ h5::after{
   }
 
 // <--Services that we provides --> 
-  .services_info{
+  .services_info {
       display: flex;
       justify-content: space-evenly;
   }
@@ -299,17 +299,17 @@ h5::after{
 
       img{
        display: none;
-       visibility: hidden;
+      //  visibility: hidden;
      }
     
      .brand_circle {
         display: none;
-        visibility: hidden;
+        // visibility: hidden;
     
       }
       .brand_circle h5.brand_lobo{
         display: none;
-        visibility: hidden;
+        // visibility: hidden;
       }
 
 

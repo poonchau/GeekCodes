@@ -37,6 +37,9 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 // import { LoginPageComponent } from './authentication/login-page/login-page.component';
 // import { SignupPageComponent } from './authentication/signup-page/signup-page.component';
+import {AuthenticationModule} from './authentication/authentication.module';
+import { EmployeeCountComponent } from './components/employee-count/employee-count.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 
 
 
@@ -58,10 +61,9 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     AddDynamicValidatorsComponent,
     TemplateformComponent,
     ReactiveformComponent,
-    // AuthenticationComponent,
-    // LoginPageComponent,
-    // SignupPageComponent,
-    
+    EmployeeCountComponent,
+    EmployeeListComponent,
+
    
   ],
   imports: [
@@ -70,6 +72,8 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     BrowserAnimationsModule,
     FormsModule, 
     ReactiveFormsModule,
+
+    AuthenticationModule,
     ToastrModule.forRoot(),
     //Angular Material
     MatButtonModule, 

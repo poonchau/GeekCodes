@@ -63,7 +63,7 @@
                     <label>male</label>
                 </div>
                 <div class="form-check row">
-                    <input type="checkbox" class="form-check-input" name="termField" ngModel>
+                    <input type="checkbox" class="form-check-input" name="termField" ngModel required>
                     <label>Agree to terms</label>
                 </div>
                 <div class="form-group row">
@@ -138,7 +138,7 @@
         </mat-form-field>
 
         <div formArrayName="skills">
-            <div *ngFor="let item of signUpForm.controls.skills['controls']; let i = index"[formGroupName]="i">
+            <div *ngFor="let item of signUpForm.controls.skills['controls']; let i = index" [formGroupName]="i">
                 <mat-form-field>
                     <input matInput type="text" formControlName="skill" id="skill{{i}}"placeholder="Angular, C#">
                 </mat-form-field>

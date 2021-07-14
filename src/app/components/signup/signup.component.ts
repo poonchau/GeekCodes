@@ -45,7 +45,7 @@ export class SignupComponent implements OnInit {
   }
 
   closeSignupPage(){
-    this.router.navigateByUrl('/header');
+    this.router.navigateByUrl('/searchBox');
   }
 
 }

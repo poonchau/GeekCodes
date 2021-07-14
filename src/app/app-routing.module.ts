@@ -10,10 +10,12 @@ import { FooterComponent } from './Home-Page/footer/footer.component';
 import { ControlSidebarComponent} from './Home-Page/control-sidebar/control-sidebar.component';
 import { AddDynamicValidatorsComponent } from './components/add-dynamic-validators/add-dynamic-validators.component';
 import { TemplateformComponent } from './templateform/templateform.component'; 
+import { EmployeeCountComponent } from './components/employee-count/employee-count.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 
 const routes: Routes = [
   
-   {path:'header', component:HeaderComponent},
+   {path:'', component:HeaderComponent},
    {path:'footer', component:FooterComponent},
    {path:'mainheader', component: MainheaderComponent},
    {path:'searchBox', component: SearchBoxComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
    {path:'sidebar', component: ControlSidebarComponent},
    {path:'add', component:AddDynamicValidatorsComponent},
    {path:'template',component:TemplateformComponent},
+   {path:'Emplist', component:EmployeeListComponent},
+   
    {path:'authentication', loadChildren: './authentication/authentication.module#AuthenticationModule'}
    
 ];

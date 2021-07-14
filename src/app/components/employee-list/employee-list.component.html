@@ -1,0 +1,34 @@
+<!-- <p>employee-list Parent Component</p> -->
+<app-employee-count [all]="getTotalEmp()"
+                    [female]="getTotalFemaleEmp()"
+                    [male]="getTotalMaleEmp()"
+                    (result)="getInput($event)">
+
+</app-employee-count>
+<br>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th>EployeeCode</th>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let emp of employeeDetails">
+            <tr *ngIf="selectedOption == 'all' || selectedOption == emp.gender">
+                <td>{{emp.code}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.gender}}</td>
+            </tr>
+        </ng-container>
+       
+    </tbody>
+    
+</table>
+
+
+
+
+
